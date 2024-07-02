@@ -1,0 +1,43 @@
+import os
+import time
+import random
+import csv
+
+
+print("¨¨"*30)
+print("<><><><><><><><><><> Tienda CatPremium <><><><><><><><><><>")
+print("¨¨"*30)
+print("> 1. Registrar pedido\n> 2. Listar pedidos\n> 3. Hoja de ruta\n> 4. Cerrar sesion/Salir")
+print("¨¨"*30)
+
+time.sleep(2)
+
+# Asignaciones
+q5kg = 0
+q10kg = 0
+q20kg = 0
+cliente = ("no asignado")
+direccion = ("no asignado")
+sector = ("no asignado")
+# Menus
+openmenu = input("Ingresar opcion >>>  ")
+openmenu1 = 0
+
+while openmenu == 1:
+    time.sleep(2)
+    cliente = input("> Nombre de cliente: ")
+    direccion = input("> Ingesar direccion: ")
+    sector = input("> Ingresar sector: (San Bernardo | Calera | Buin) ")
+    openmenu1 = input("Peso del saco elegido \n> > 1. Saco de 5 KG\n> 2. Saco de 10 KG\n> 3. Saco de 20 KG")
+    while openmenu1 == 1:
+        q5kg = int(input("Ingresar cantidad de sacos (5KG)"))
+    if openmenu1 == 2:
+        q10kg = int(input("Ingresar cantidad de sacos (10KG)"))
+    elif openmenu1 == 3:
+        q20kg = int(input("Ingresar cantidad de sacos (20KG)"))
+if openmenu == 2:
+    print(cliente, direccion, sector, q5kg, q10kg, q20kg, sep=" | ")
+elif openmenu == 3: 
+    print(cliente, direccion, sector, q5kg, q10kg, q20kg, sep=" | ")
+elif openmenu == 4:
+    print("Sesion terminada")
